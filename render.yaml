@@ -1,0 +1,34 @@
+# render.yaml
+
+services:
+  - type: web
+    name: keycloak
+    env: docker
+    plan: starter
+    region: singapore  # use region close to your Neon DB (e.g., ap-southeast-1)
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: KC_DB
+        value: postgres
+      - key: KC_DB_URL
+        value: jdbc:postgresql://ep-noisy-dust-a1bnpp34-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+      - key: KC_DB_USERNAME
+        value: neondb_owner
+      - key: KC_DB_PASSWORD
+        value: npg_0klnues9FvZp
+      - key: KC_HOSTNAME
+        value: keycloak.onrender.com  # update to your actual Render hostname
+      - key: KC_PROXY
+        value: edge
+      - key: KC_HOSTNAME_STRICT
+        value: "false"
+      - key: KC_HTTP_ENABLED
+        value: "true"
+      - key: KEYCLOAK_ADMIN
+        value: admin
+      - key: KEYCLOAK_ADMIN_PASSWORD
+        value: admin@2025
+      - key: PORT
+        value: "8080"
+
+# No database block since you're using external Neon DB
