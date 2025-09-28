@@ -11,11 +11,11 @@ services:
       - key: KC_DB
         value: postgres
       - key: KC_DB_URL
-        value: jdbc:postgresql://ep-noisy-dust-a1bnpp34-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+        value: jdbc:postgresql://ep-cool-darkness-adx7srkt-pooler.c-2.us-east-1.aws.neon.tech/KeyCloak?sslmode=require&channel_binding=require
       - key: KC_DB_USERNAME
         value: neondb_owner
       - key: KC_DB_PASSWORD
-        value: npg_0klnues9FvZp
+        value: npg_MpA2lf5rQbBS
       - key: KC_PROXY
         value: edge
       - key: KC_HOSTNAME_STRICT
