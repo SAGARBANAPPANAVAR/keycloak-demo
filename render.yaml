@@ -16,8 +16,6 @@ services:
         value: neondb_owner
       - key: KC_DB_PASSWORD
         value: npg_0klnues9FvZp
-      - key: KC_HOSTNAME
-        value: keycloak.onrender.com  # update to your actual Render hostname
       - key: KC_PROXY
         value: edge
       - key: KC_HOSTNAME_STRICT
@@ -28,7 +26,4 @@ services:
         value: admin
       - key: KEYCLOAK_ADMIN_PASSWORD
         value: admin@2025
-      - key: PORT
-        value: "8080"
-
 # No database block since you're using external Neon DB
