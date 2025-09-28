@@ -26,4 +26,7 @@ services:
         value: admin
       - key: KEYCLOAK_ADMIN_PASSWORD
         value: admin@2025
+      - key: PORT
+        value: "8080"
+
 # No database block since you're using external Neon DB

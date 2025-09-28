@@ -14,4 +14,4 @@ EXPOSE 8080
 # Set Keycloak to listen on 0.0.0.0 so Render can access it
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
 #CMD ["start", "--http-enabled=true", "--http-port=8080", "--proxy-headers=xforwarded", "--http-host=0.0.0.0","--hostname=security-toppercent.onrender.com", "--hostname-strict=false"]
-CMD start --http-enabled=true --http-port=$PORT --proxy-headers=xforwarded --http-host=0.0.0.0 --hostname-strict=false
+CMD ["start", "--http-enabled=true", "--http-port=8080", "--proxy-headers=xforwarded", "--http-host=0.0.0.0", "--hostname-strict=false"]
